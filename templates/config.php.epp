@@ -1,0 +1,20 @@
+<?php
+$CONFIG = array (
+  'trusted_domains' =>
+  array (
+  <% $nextcloud::nc_trust_domains.each |$key, $value| { -%>
+  <%= $key %> => '<%= $value %>',
+  <% } -%>
+),
+<% $nextcloud::nc_config.each |$key, $value| { -%>
+  '<%= $key %>' => <%= $value %>,
+<% } -%>
+<% if $nextcloud::redis { -%>
+  'redis' => 
+  array (
+  <% $nextcloud::redis_config.each |$key, $value| { -%>
+  '<%= $key %>' => <%= $value %>,
+<% } -%>
+  ),
+<% } -%>
+);

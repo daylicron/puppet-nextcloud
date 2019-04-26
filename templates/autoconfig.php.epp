@@ -1,0 +1,12 @@
+<?php
+$AUTOCONFIG = array(
+  "dbtype"        => "<%= $nextcloud::ac_db_type %>",
+  "dbname"        => "<%= $nextcloud::ac_db_name %>",
+  "dbuser"        => "<%= $nextcloud::ac_db_user %>",
+  "dbpass"        => "<%= $nextcloud::ac_db_password %>",
+  "dbhost"        => "<%= $nextcloud::ac_db_host %>",
+  "dbtableprefix" => "<%= $nextcloud::ac_db_table_prefix %>",
+  "adminlogin"    => "<%= $nextcloud::ac_adminuser %>",
+  "adminpass"     => "<%= $nextcloud::ac_adminpw %>",
+  "directory"     => "<%= $nextcloud::ac_datadirectory %>",
+);
